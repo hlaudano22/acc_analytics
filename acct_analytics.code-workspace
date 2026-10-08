@@ -1,7 +1,11 @@
 {
-    "folders": [
-        {
-            "path": ".."
-        }
-    ]
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "C:\\Users\\Henry\\.conda\\envs\\ai-notebook\\python.exe",
+    "jupyter.interactiveWindow.creationMode": "perFile"
+  }
 }
