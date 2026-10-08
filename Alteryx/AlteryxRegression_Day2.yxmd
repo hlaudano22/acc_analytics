@@ -1,0 +1,760 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="145" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Firm_data.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ID" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="year" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="log_assets" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="leverage" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="firm_growth" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="rec_inv" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="roa" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="firm_age" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="operating_risk" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="bankruptcy_risk" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="boardsize" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="acsize" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="big4" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="log_fee" source="File: C:\Users\fbw4vt\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\Firm_data.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="138" y="151" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="big4" selected="True" type="V_String" size="2147483647" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="689" y="102" width="301" height="229" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 14</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="12">
+          <GuiSettings Plugin="Linear_Regression">
+            <Position x="714" y="175" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="curPage">Home</Value>
+              <Value name="curTab">advanced</Value>
+              <Value name="standardize_pred">True</Value>
+              <Value name="internal_cv">True</Value>
+              <Value name="display_graphs">True</Value>
+              <Value name="set_seed_internal_cv">True</Value>
+              <Value name="set_seed_external_cv">True</Value>
+              <Value name="lambda_1se">True</Value>
+              <Value name="lambda_min">False</Value>
+              <Value name="Model Name">Linear_Regression_12</Value>
+              <Value name="Y Var">log_fee</Value>
+              <Value name="X Vars">log_assets,leverage,firm_growth,rec_inv,roa,firm_age,operating_risk,bankruptcy_risk,boardsize,acsize,big4</Value>
+              <Value name="Omit Constant">False</Value>
+              <Value name="Use Weights">False</Value>
+              <Value name="Weight Vec" />
+              <Value name="regularization">False</Value>
+              <Value name="alpha">0.5</Value>
+              <Value name="nfolds">5</Value>
+              <Value name="lambda">lambda_1se</Value>
+              <Value name="seed_internal_cv">1</Value>
+              <Value name="lambda_no_cv">0.5</Value>
+              <Value name="external_cv">False</Value>
+              <Value name="nfolds_external">5</Value>
+              <Value name="numberTrials">3</Value>
+              <Value name="external_seed_value">1</Value>
+              <Value name="graph.resolution">1x</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Linear_Regression_12</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="882" y="151" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\fbw4vt\AppData\Local\Temp\Alteryx\Engine_11980_88dbab314fbd4ffc85c39c84df8e494f_\Engine_11980_563c31ea8763461e9d296a07416adbdf~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings>
+            <Position x="738" y="247" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="model.name">log_fee_model_NN</Value>
+              <Value name="select.target">log_fee</Value>
+              <Value name="select.predictors">ID=False,year=False,log_assets=True,leverage=True,firm_growth=True,rec_inv=True,roa=True,firm_age=True,operating_risk=True,bankruptcy_risk=True,boardsize=True,acsize=True,big4=True,log_fee=False</Value>
+              <Value name="use.weights">False</Value>
+              <Value name="select.weights">ID</Value>
+              <Value name="num.nodes">10</Value>
+              <Value name="marginal.plots">True</Value>
+              <Value name="custom.scaling">False</Value>
+              <Value name="scale.type">z-score</Value>
+              <Value name="decay">0.100</Value>
+              <Value name="range">0.700</Value>
+              <Value name="max.wts">1000</Value>
+              <Value name="max.iter">100</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Neural_Network.yxmc" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="822" y="235" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings>
+            <Position x="906" y="235" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="target.level" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="predictions">
+              <RecordInfo>
+                <Field name="Actual" source="R-DATA:" type="Double" />
+                <Field name="log_fee_model_NN" source="R-DATA:" type="Double" />
+                <Field name="Linear_Regression_12" source="R-DATA:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="error_measures">
+              <RecordInfo>
+                <Field name="Model" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="Correlation" source="R-DATA:" type="Double" />
+                <Field name="RMSE" source="R-DATA:" type="Double" />
+                <Field name="MAE" source="R-DATA:" type="Double" />
+                <Field name="MPE" source="R-DATA:" type="Double" />
+                <Field name="MAPE" source="R-DATA:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Report">
+              <RecordInfo>
+                <Field name="Group" size="64" source="Formula: (Multiple Sources)" type="V_String" />
+                <Field name="Layout" size="1073741823" source="Report:Layout:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Model Comparison.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="533" y="330" width="150" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 17</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="15">
+          <GuiSettings Plugin="Logistic_Regression">
+            <Position x="558" y="379" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="curPage">Home</Value>
+              <Value name="curTab">advanced</Value>
+              <Value name="lambda_1se">True</Value>
+              <Value name="lambda_min">False</Value>
+              <Value name="Model Name">Logistic_Regression_15</Value>
+              <Value name="Y Var">big4</Value>
+              <Value name="X Vars">log_assets,leverage,firm_growth,rec_inv,roa,firm_age,operating_risk,bankruptcy_risk,boardsize,acsize</Value>
+              <Value name="Use Weights">False</Value>
+              <Value name="Weight Vec" />
+              <Value name="regularization">False</Value>
+              <Value name="alpha">0.5</Value>
+              <Value name="standardize_pred">False</Value>
+              <Value name="internal_cv">False</Value>
+              <Value name="nfolds">5</Value>
+              <Value name="lambda">lambda_1se</Value>
+              <Value name="set_seed_internal_cv">False</Value>
+              <Value name="seed_internal_cv">1</Value>
+              <Value name="lambda_no_cv">0.5</Value>
+              <Value name="posClass">
+              </Value>
+              <Value name="Link">logit</Value>
+              <Value name="external_cv">False</Value>
+              <Value name="nfolds_external">5</Value>
+              <Value name="numberTrials">3</Value>
+              <Value name="stratified">False</Value>
+              <Value name="set_seed_external_cv">False</Value>
+              <Value name="external_seed_value">1</Value>
+              <Value name="graph.resolution">1x</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Logistic_Regression_15</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Logistic_Regression/Supporting_Macros/Logistic_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Logistic_Regression/Supporting_Macros/Logistic_Regression.yxmc" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="654" y="379" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\fbw4vt\AppData\Local\Temp\Alteryx\Engine_16960_15af93f7dbdf47d5a567e7162468c3b3_\Engine_16960_09015acc418c4c32acf5a2399290cc6e~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="269" y="426" width="150" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 21</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="18">
+          <GuiSettings>
+            <Position x="294" y="475" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="model.name" />
+              <Value name="select.target">big4</Value>
+              <Value name="select.predictors">ID=False,year=False,log_assets=True,leverage=True,firm_growth=True,rec_inv=True,roa=True,firm_age=True,operating_risk=True,bankruptcy_risk=True,boardsize=True,acsize=True,big4=False,log_fee=False</Value>
+              <Value name="use.weights">False</Value>
+              <Value name="select.weights">ID</Value>
+              <Value name="num.nodes">10</Value>
+              <Value name="marginal.plots">True</Value>
+              <Value name="custom.scaling">False</Value>
+              <Value name="scale.type">z-score</Value>
+              <Value name="decay">0.100</Value>
+              <Value name="range">0.700</Value>
+              <Value name="max.wts">1000</Value>
+              <Value name="max.iter">100</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Neural_Network.yxmc" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="390" y="475" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\fbw4vt\AppData\Local\Temp\Alteryx\Engine_16960_15af93f7dbdf47d5a567e7162468c3b3_\Engine_16960_68a500551c2945d482a207ef7bd719b4~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="292" y="54" width="242" height="240" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 25</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="317" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="log_fee" action="Avg" rename="Avg_log_fee" />
+                <SummarizeField field="big4" action="GroupBy" rename="big4" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings>
+            <Position x="317" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="response">log_fee</Value>
+              <Value name="group.id">big4</Value>
+              <Value name="control.level" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Test_of_Means.yxmc" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="354" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="iif([firm_age]&gt;=30,&quot;1&quot;,&quot;0&quot;)" field="oldfirm" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="if [firm_age] &gt;= 30 then &quot;1&quot;&#xA;else &quot;0&quot;&#xA;endif" field="oldfirm2" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>oldfirm = iif([firm_age]&gt;=30,"1","0")
+oldfirm2 = if [firm_age] &gt;= 30 then "1"
+el...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings>
+            <Position x="450" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="response">ID</Value>
+              <Value name="group.id">big4</Value>
+              <Value name="control.level" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Test_of_Means.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="785" y="438" width="150" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 26</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="990" y="499" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\fbw4vt\AppData\Local\Temp\Alteryx\Engine_16960_15af93f7dbdf47d5a567e7162468c3b3_\Engine_16960_8803938767bc45e389a8d00465bbc85f~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings>
+            <Position x="882" y="487" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="target.level" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="error_measures">
+              <RecordInfo>
+                <Field name="Model" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="Accuracy" source="R-DATA:" type="Double" />
+                <Field name="Accuracy_0" source="R-DATA:" type="Double" />
+                <Field name="Accuracy_1" source="R-DATA:" type="Double" />
+                <Field name="F1" source="R-DATA:" type="Double" />
+                <Field name="AUC" source="R-DATA:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="predictions">
+              <RecordInfo>
+                <Field name="Actual" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="Field_2" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="Logistic_Regression_15" size="1073741823" source="R-DATA:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Report">
+              <RecordInfo>
+                <Field name="Group" size="64" source="Formula: (Multiple Sources)" type="V_String" />
+                <Field name="Layout" size="1073741823" source="Report:Layout:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Model Comparison.yxmc" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="810" y="511" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="20" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="20" Connection="Models" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="30" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="30" Connection="Models" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Reports" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Reports" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Report" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Report" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AlteryxRegression_Day2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="6c7fb9e9-f45b-472d-9844-af88b1006f6a" />
+      <Telemetry>
+        <PreviousWorkflowId value="bada4625-4bba-46a6-8a37-46e936a3d3ab" />
+        <OriginWorkflowId value="d6e1467b-5b2f-45b6-8d62-125689b5caf9" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
