@@ -1,0 +1,639 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2_cleaned.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>HW2_cleaned.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Median_at" source="Summarize: Median - at" type="Double" />
+            <Field name="fyear" source="Summarize: GroupBy - fyear" type="Int64" />
+            <Field name="gvkey" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="sic" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="exchg" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Int64" />
+            <Field name="at" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="ceq" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="ib" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="xad" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_])" type="Double" />
+            <Field name="xrd" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_])" type="Double" />
+            <Field name="au" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="csho" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="prcc_f" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="E" source="Formula: [ib] / [csho]" type="Double" />
+            <Field name="BV" source="Formula: [ceq] / [csho]" type="Double" />
+            <Field name="RD" source="Formula: [xrd] / [csho]" type="Double" />
+            <Field name="AD" source="Formula: [xad] / [csho]" type="Double" />
+            <Field name="Percentile_prcc_f_99" source="Summarize: Percentile - prcc_f" type="Double" />
+            <Field name="Percentile_prcc_f_1" source="Summarize: Percentile - prcc_f" type="Double" />
+            <Field name="Percentile_E_99" source="Summarize: Percentile - E" type="Double" />
+            <Field name="Percentile_E_1" source="Summarize: Percentile - E" type="Double" />
+            <Field name="Percentile_BV_99" source="Summarize: Percentile - BV" type="Double" />
+            <Field name="Percentile_BV_1" source="Summarize: Percentile - BV" type="Double" />
+            <Field name="Percentile_RD_99" source="Summarize: Percentile - RD" type="Double" />
+            <Field name="Percentile_RD_1" source="Summarize: Percentile - RD" type="Double" />
+            <Field name="Percentile_AD_99" source="Summarize: Percentile - AD" type="Double" />
+            <Field name="Percentile_AD_1" source="Summarize: Percentile - AD" type="Double" />
+            <Field name="P_w" source="Formula: if [prcc_f] &gt; [Percentile_prcc_f_99] then&#xA;[Percentile_prcc_f_99]&#xA;elseif [prcc_f] &lt; [Percentile_prcc_f_1] then&#xA;[Percentile_prcc_f_1]&#xA;else [prcc_f]&#xA;endif" type="Double" />
+            <Field name="E_w" source="Formula: if [E] &gt; [Percentile_E_99] then&#xA;[Percentile_E_99]&#xA;&#xA;elseif [E] &lt; [Percentile_E_1] then&#xA;[Percentile_E_1]&#xA;&#xA;else [E]&#xA;&#xA;endif" type="Double" />
+            <Field name="BV_w" source="Formula: if [BV] &gt; [Percentile_BV_99] then&#xA;[Percentile_BV_99]&#xA;&#xA;elseif [BV] &lt; [Percentile_BV_1] then&#xA;[Percentile_BV_1]&#xA;&#xA;else [BV]&#xA;&#xA;endif" type="Double" />
+            <Field name="RD_w" source="Formula: if [RD] &gt; [Percentile_RD_99] then&#xA;[Percentile_RD_99]&#xA;&#xA;elseif [RD] &lt; [Percentile_RD_1] then&#xA;[Percentile_RD_1]&#xA;&#xA;else [RD]&#xA;&#xA;endif" type="Double" />
+            <Field name="AD_w" source="Formula: if [AD] &gt; [Percentile_AD_99] then&#xA;[Percentile_AD_99]&#xA;&#xA;elseif [AD] &lt; [Percentile_AD_1] then&#xA;[Percentile_AD_1]&#xA;&#xA;else [AD]&#xA;&#xA;endif" type="Double" />
+            <Field name="large_firm" size="1073741823" source="Formula: if [at] &gt; [Median_at]&#xA;&#xA;then 1&#xA;else 0 &#xA;endif&#xA;&#xA;// Again, could also be IFF([at]&gt;[Median_at], 1, 0)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="246" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[fyear] = 2001</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[fyear] = 2001</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="fyear" source="Summarize: GroupBy - fyear" type="Int64" />
+            <Field name="gvkey" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="sic" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="exchg" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Int64" />
+            <Field name="P_w" source="Formula: if [prcc_f] &gt; [Percentile_prcc_f_99] then&#xA;[Percentile_prcc_f_99]&#xA;elseif [prcc_f] &lt; [Percentile_prcc_f_1] then&#xA;[Percentile_prcc_f_1]&#xA;else [prcc_f]&#xA;endif" type="Double" />
+            <Field name="E_w" source="Formula: if [E] &gt; [Percentile_E_99] then&#xA;[Percentile_E_99]&#xA;&#xA;elseif [E] &lt; [Percentile_E_1] then&#xA;[Percentile_E_1]&#xA;&#xA;else [E]&#xA;&#xA;endif" type="Double" />
+            <Field name="BV_w" source="Formula: if [BV] &gt; [Percentile_BV_99] then&#xA;[Percentile_BV_99]&#xA;&#xA;elseif [BV] &lt; [Percentile_BV_1] then&#xA;[Percentile_BV_1]&#xA;&#xA;else [BV]&#xA;&#xA;endif" type="Double" />
+            <Field name="RD_w" source="Formula: if [RD] &gt; [Percentile_RD_99] then&#xA;[Percentile_RD_99]&#xA;&#xA;elseif [RD] &lt; [Percentile_RD_1] then&#xA;[Percentile_RD_1]&#xA;&#xA;else [RD]&#xA;&#xA;endif" type="Double" />
+            <Field name="AD_w" source="Formula: if [AD] &gt; [Percentile_AD_99] then&#xA;[Percentile_AD_99]&#xA;&#xA;elseif [AD] &lt; [Percentile_AD_1] then&#xA;[Percentile_AD_1]&#xA;&#xA;else [AD]&#xA;&#xA;endif" type="Double" />
+            <Field name="large_firm" size="1073741823" source="Formula: if [at] &gt; [Median_at]&#xA;&#xA;then 1&#xA;else 0 &#xA;endif&#xA;&#xA;// Again, could also be IFF([at]&gt;[Median_at], 1, 0)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="fyear" source="Summarize: GroupBy - fyear" type="Int64" />
+            <Field name="gvkey" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="sic" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="exchg" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Int64" />
+            <Field name="P_w" source="Formula: if [prcc_f] &gt; [Percentile_prcc_f_99] then&#xA;[Percentile_prcc_f_99]&#xA;elseif [prcc_f] &lt; [Percentile_prcc_f_1] then&#xA;[Percentile_prcc_f_1]&#xA;else [prcc_f]&#xA;endif" type="Double" />
+            <Field name="E_w" source="Formula: if [E] &gt; [Percentile_E_99] then&#xA;[Percentile_E_99]&#xA;&#xA;elseif [E] &lt; [Percentile_E_1] then&#xA;[Percentile_E_1]&#xA;&#xA;else [E]&#xA;&#xA;endif" type="Double" />
+            <Field name="BV_w" source="Formula: if [BV] &gt; [Percentile_BV_99] then&#xA;[Percentile_BV_99]&#xA;&#xA;elseif [BV] &lt; [Percentile_BV_1] then&#xA;[Percentile_BV_1]&#xA;&#xA;else [BV]&#xA;&#xA;endif" type="Double" />
+            <Field name="RD_w" source="Formula: if [RD] &gt; [Percentile_RD_99] then&#xA;[Percentile_RD_99]&#xA;&#xA;elseif [RD] &lt; [Percentile_RD_1] then&#xA;[Percentile_RD_1]&#xA;&#xA;else [RD]&#xA;&#xA;endif" type="Double" />
+            <Field name="AD_w" source="Formula: if [AD] &gt; [Percentile_AD_99] then&#xA;[Percentile_AD_99]&#xA;&#xA;elseif [AD] &lt; [Percentile_AD_1] then&#xA;[Percentile_AD_1]&#xA;&#xA;else [AD]&#xA;&#xA;endif" type="Double" />
+            <Field name="large_firm" size="1073741823" source="Formula: if [at] &gt; [Median_at]&#xA;&#xA;then 1&#xA;else 0 &#xA;endif&#xA;&#xA;// Again, could also be IFF([at]&gt;[Median_at], 1, 0)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="Linear_Regression">
+        <Position x="342" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="curPage">Home</Value>
+          <Value name="curTab">advanced</Value>
+          <Value name="standardize_pred">True</Value>
+          <Value name="internal_cv">True</Value>
+          <Value name="display_graphs">True</Value>
+          <Value name="set_seed_internal_cv">True</Value>
+          <Value name="set_seed_external_cv">True</Value>
+          <Value name="lambda_1se">True</Value>
+          <Value name="lambda_min">False</Value>
+          <Value name="Model Name">Linear_Regression_2</Value>
+          <Value name="Y Var">P_w</Value>
+          <Value name="X Vars">E_w,BV_w,RD_w,AD_w</Value>
+          <Value name="Omit Constant">False</Value>
+          <Value name="Use Weights">False</Value>
+          <Value name="Weight Vec" />
+          <Value name="regularization">False</Value>
+          <Value name="alpha">0.5</Value>
+          <Value name="nfolds">5</Value>
+          <Value name="lambda">lambda_1se</Value>
+          <Value name="seed_internal_cv">1</Value>
+          <Value name="lambda_no_cv">0.5</Value>
+          <Value name="external_cv">False</Value>
+          <Value name="nfolds_external">5</Value>
+          <Value name="numberTrials">3</Value>
+          <Value name="external_seed_value">1</Value>
+          <Value name="graph.resolution">1x</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Linear_Regression_2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Name" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Object" size="2147483647" source="R-DATA:SERIAL" type="Blob" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Interactive Report">
+          <RecordInfo>
+            <Field name="Text" size="1073741823" source="Report:Text:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Reports">
+          <RecordInfo>
+            <Field name="Desc" size="64" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Report" size="1073741823" source="Report: (Multiple Sources)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="Score">
+        <Position x="438" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="modelChoice">Local Model</Value>
+          <Value name="score field">
+          </Value>
+          <Value name="is oversampled">False</Value>
+          <Value name="oversampled value">
+          </Value>
+          <Value name="original percent">2</Value>
+          <Value name="log y">False</Value>
+          <Value name="prediction.interval">False</Value>
+          <Value name="interval.level">95</Value>
+          <Value name="append.xdf">False</Value>
+          <Value name="num.records">256000</Value>
+          <Value name="credentials">
+          </Value>
+          <Value name="models">
+          </Value>
+          <Value name="page">
+          </Value>
+          <Value name="errorStatus">
+          </Value>
+          <Value name="modelDetailJSON">
+          </Value>
+          <Value name="modelDetails">{"Name":"","Owner":"","Status":"","Id":"","LastDeployment":"","LastUpdated":"","LatestVersion":"","ActiveVersion":"","NumReplications":"","NumVersions":""}</Value>
+          <Value name="promoteURL">
+          </Value>
+          <Value name="username">
+          </Value>
+          <Value name="model_name">
+          </Value>
+          <Value name="model_owner">
+          </Value>
+          <Value name="apiKey">
+          </Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="fyear" source="R-DATA:" type="Double" />
+            <Field name="gvkey" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="sic" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="exchg" source="R-DATA:" type="Double" />
+            <Field name="P_w" source="R-DATA:" type="Double" />
+            <Field name="E_w" source="R-DATA:" type="Double" />
+            <Field name="BV_w" source="R-DATA:" type="Double" />
+            <Field name="RD_w" source="R-DATA:" type="Double" />
+            <Field name="AD_w" source="R-DATA:" type="Double" />
+            <Field name="large_firm" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Score" source="R-DATA:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Score\Supporting_Macros\score-engine.yxmc" EngineDll="Macro" EngineDllEntryPoint="Score\Supporting_Macros\score-engine.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.PearsonCorrelation.PearsonCorrelation">
+        <Position x="534" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields orderChanged="True">
+            <Field name="Score" />
+            <Field name="P_w" />
+            <Field name="fyear" selected="False" />
+            <Field name="exchg" selected="False" />
+            <Field name="E_w" selected="False" />
+            <Field name="BV_w" selected="False" />
+            <Field name="RD_w" selected="False" />
+            <Field name="AD_w" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <Covariance value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Result" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxPearsonCorrelation" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="630" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Result] * [Result]" field="r2" size="8" type="Double" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[r2 = [Result] * [Result]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Result" type="Double" />
+            <Field name="r2" source="Formula: [Result] * [Result]" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="186" y="138" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="822" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output26</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="186" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Control Parameter (28)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Median_at" selected="False" />
+            <SelectField field="at" selected="False" />
+            <SelectField field="ceq" selected="False" />
+            <SelectField field="ib" selected="False" />
+            <SelectField field="xad" selected="False" />
+            <SelectField field="xrd" selected="False" />
+            <SelectField field="au" selected="False" />
+            <SelectField field="csho" selected="False" />
+            <SelectField field="prcc_f" selected="False" />
+            <SelectField field="E" selected="False" />
+            <SelectField field="BV" selected="False" />
+            <SelectField field="RD" selected="False" />
+            <SelectField field="AD" selected="False" />
+            <SelectField field="Percentile_prcc_f_99" selected="False" />
+            <SelectField field="Percentile_prcc_f_1" selected="False" />
+            <SelectField field="Percentile_E_99" selected="False" />
+            <SelectField field="Percentile_E_1" selected="False" />
+            <SelectField field="Percentile_BV_99" selected="False" />
+            <SelectField field="Percentile_BV_1" selected="False" />
+            <SelectField field="Percentile_RD_99" selected="False" />
+            <SelectField field="Percentile_RD_1" selected="False" />
+            <SelectField field="Percentile_AD_99" selected="False" />
+            <SelectField field="Percentile_AD_1" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="fyear" source="Summarize: GroupBy - fyear" type="Int64" />
+            <Field name="gvkey" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="sic" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="exchg" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Int64" />
+            <Field name="P_w" source="Formula: if [prcc_f] &gt; [Percentile_prcc_f_99] then&#xA;[Percentile_prcc_f_99]&#xA;elseif [prcc_f] &lt; [Percentile_prcc_f_1] then&#xA;[Percentile_prcc_f_1]&#xA;else [prcc_f]&#xA;endif" type="Double" />
+            <Field name="E_w" source="Formula: if [E] &gt; [Percentile_E_99] then&#xA;[Percentile_E_99]&#xA;&#xA;elseif [E] &lt; [Percentile_E_1] then&#xA;[Percentile_E_1]&#xA;&#xA;else [E]&#xA;&#xA;endif" type="Double" />
+            <Field name="BV_w" source="Formula: if [BV] &gt; [Percentile_BV_99] then&#xA;[Percentile_BV_99]&#xA;&#xA;elseif [BV] &lt; [Percentile_BV_1] then&#xA;[Percentile_BV_1]&#xA;&#xA;else [BV]&#xA;&#xA;endif" type="Double" />
+            <Field name="RD_w" source="Formula: if [RD] &gt; [Percentile_RD_99] then&#xA;[Percentile_RD_99]&#xA;&#xA;elseif [RD] &lt; [Percentile_RD_1] then&#xA;[Percentile_RD_1]&#xA;&#xA;else [RD]&#xA;&#xA;endif" type="Double" />
+            <Field name="AD_w" source="Formula: if [AD] &gt; [Percentile_AD_99] then&#xA;[Percentile_AD_99]&#xA;&#xA;elseif [AD] &lt; [Percentile_AD_1] then&#xA;[Percentile_AD_1]&#xA;&#xA;else [AD]&#xA;&#xA;endif" type="Double" />
+            <Field name="large_firm" size="1073741823" source="Formula: if [at] &gt; [Median_at]&#xA;&#xA;then 1&#xA;else 0 &#xA;endif&#xA;&#xA;// Again, could also be IFF([at]&gt;[Median_at], 1, 0)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="726" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Result" type="Double" />
+            <Field name="r2" source="Formula: [Result] * [Result]" type="Double" />
+            <Field name="fyear" source="Summarize: GroupBy - fyear" type="Int64" />
+            <Field name="Count" source="Summarize: Count - fyear" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="630" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="fyear" action="GroupBy" rename="fyear" />
+            <SummarizeField field="gvkey" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="fyear" source="Summarize: GroupBy - fyear" type="Int64" />
+            <Field name="Count" source="Summarize: Count - fyear" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="5" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Model" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="12" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="12" Connection="Source" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="8" Connection="Action" />
+      <Destination ToolID="3" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Question" />
+      <Destination ToolID="8" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (9)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Control Parameter (10)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>HW2_macro</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="d67e1823-cc5c-4ddb-af56-82f831e36ef3" />
+      <Telemetry>
+        <PreviousWorkflowId value="be8f3837-0d62-4692-8646-876846d2bf9a" />
+        <OriginWorkflowId value="be8f3837-0d62-4692-8646-876846d2bf9a" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="8" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>2001</ReplaceText>
+              <Destination>3/Expression</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (1)</Name>
+          <ToolId value="1" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (26)</Description>
+              <Name>Macro Output (9)</Name>
+              <ToolId value="9" />
+            </Question>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>Year</Description>
+              <Name>Control Parameter (10)</Name>
+              <ToolId value="10" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <BatchMacro>
+        <OutputMode>AllSame</OutputMode>
+        <ControlParams>
+          <ControlParam>
+            <Name>Control Parameter (10)</Name>
+            <Description>Year</Description>
+          </ControlParam>
+        </ControlParams>
+      </BatchMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="9" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

@@ -1,4 +1,13 @@
+# data files (kept out of git)
+Data_Files/
+*.csv
+*.yxdb
+
+
+# junk / backups
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
+*.bak
+desktop.ini
 .DS_Store

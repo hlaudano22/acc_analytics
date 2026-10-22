@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2_cleaned.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>HW2_cleaned.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Median_at" source="Summarize: Median - at" type="Double" />
+            <Field name="fyear" source="Summarize: GroupBy - fyear" type="Int64" />
+            <Field name="gvkey" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="sic" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="exchg" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Int64" />
+            <Field name="at" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="ceq" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="ib" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="xad" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_])" type="Double" />
+            <Field name="xrd" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_])" type="Double" />
+            <Field name="au" size="254" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="V_String" />
+            <Field name="csho" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="prcc_f" source="File: C:\Users\Henry\OneDrive - University of Virginia\COMM Semester 3\1. Accounting Analytics\Data_Files\HW2.csv" type="Double" />
+            <Field name="E" source="Formula: [ib] / [csho]" type="Double" />
+            <Field name="BV" source="Formula: [ceq] / [csho]" type="Double" />
+            <Field name="RD" source="Formula: [xrd] / [csho]" type="Double" />
+            <Field name="AD" source="Formula: [xad] / [csho]" type="Double" />
+            <Field name="Percentile_prcc_f_99" source="Summarize: Percentile - prcc_f" type="Double" />
+            <Field name="Percentile_prcc_f_1" source="Summarize: Percentile - prcc_f" type="Double" />
+            <Field name="Percentile_E_99" source="Summarize: Percentile - E" type="Double" />
+            <Field name="Percentile_E_1" source="Summarize: Percentile - E" type="Double" />
+            <Field name="Percentile_BV_99" source="Summarize: Percentile - BV" type="Double" />
+            <Field name="Percentile_BV_1" source="Summarize: Percentile - BV" type="Double" />
+            <Field name="Percentile_RD_99" source="Summarize: Percentile - RD" type="Double" />
+            <Field name="Percentile_RD_1" source="Summarize: Percentile - RD" type="Double" />
+            <Field name="Percentile_AD_99" source="Summarize: Percentile - AD" type="Double" />
+            <Field name="Percentile_AD_1" source="Summarize: Percentile - AD" type="Double" />
+            <Field name="P_w" source="Formula: if [prcc_f] &gt; [Percentile_prcc_f_99] then&#xA;[Percentile_prcc_f_99]&#xA;elseif [prcc_f] &lt; [Percentile_prcc_f_1] then&#xA;[Percentile_prcc_f_1]&#xA;else [prcc_f]&#xA;endif" type="Double" />
+            <Field name="E_w" source="Formula: if [E] &gt; [Percentile_E_99] then&#xA;[Percentile_E_99]&#xA;&#xA;elseif [E] &lt; [Percentile_E_1] then&#xA;[Percentile_E_1]&#xA;&#xA;else [E]&#xA;&#xA;endif" type="Double" />
+            <Field name="BV_w" source="Formula: if [BV] &gt; [Percentile_BV_99] then&#xA;[Percentile_BV_99]&#xA;&#xA;elseif [BV] &lt; [Percentile_BV_1] then&#xA;[Percentile_BV_1]&#xA;&#xA;else [BV]&#xA;&#xA;endif" type="Double" />
+            <Field name="RD_w" source="Formula: if [RD] &gt; [Percentile_RD_99] then&#xA;[Percentile_RD_99]&#xA;&#xA;elseif [RD] &lt; [Percentile_RD_1] then&#xA;[Percentile_RD_1]&#xA;&#xA;else [RD]&#xA;&#xA;endif" type="Double" />
+            <Field name="AD_w" source="Formula: if [AD] &gt; [Percentile_AD_99] then&#xA;[Percentile_AD_99]&#xA;&#xA;elseif [AD] &lt; [Percentile_AD_1] then&#xA;[Percentile_AD_1]&#xA;&#xA;else [AD]&#xA;&#xA;endif" type="Double" />
+            <Field name="large_firm" source="Formula: if [at] &gt; [Median_at]&#xA;&#xA;then 1&#xA;else 0 &#xA;endif&#xA;&#xA;// Again, could also be IFF([at]&gt;[Median_at], 1, 0)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Median_at" selected="False" />
+            <SelectField field="Percentile_prcc_f_99" selected="False" />
+            <SelectField field="Percentile_prcc_f_1" selected="False" />
+            <SelectField field="Percentile_E_99" selected="False" />
+            <SelectField field="Percentile_E_1" selected="False" />
+            <SelectField field="Percentile_BV_99" selected="False" />
+            <SelectField field="Percentile_BV_1" selected="False" />
+            <SelectField field="Percentile_RD_99" selected="False" />
+            <SelectField field="Percentile_RD_1" selected="False" />
+            <SelectField field="Percentile_AD_99" selected="False" />
+            <SelectField field="Percentile_AD_1" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="293" y="89" width="265" height="213" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Analysis 2</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Analysis 2</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="318" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[large_firm] = 1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[large_firm] = 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="474" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>
+              </TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="474" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>
+              </TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="Linear_Regression">
+            <Position x="402" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="curPage">Home</Value>
+              <Value name="curTab">advanced</Value>
+              <Value name="standardize_pred">True</Value>
+              <Value name="internal_cv">True</Value>
+              <Value name="display_graphs">True</Value>
+              <Value name="set_seed_internal_cv">True</Value>
+              <Value name="set_seed_external_cv">True</Value>
+              <Value name="lambda_1se">True</Value>
+              <Value name="lambda_min">False</Value>
+              <Value name="Model Name">Analysis2_Regression2_large</Value>
+              <Value name="Y Var">P_w</Value>
+              <Value name="X Vars">E_w,BV_w,RD_w,AD_w</Value>
+              <Value name="Omit Constant">False</Value>
+              <Value name="Use Weights">False</Value>
+              <Value name="Weight Vec" />
+              <Value name="regularization">False</Value>
+              <Value name="alpha">0.5</Value>
+              <Value name="nfolds">5</Value>
+              <Value name="lambda">lambda_1se</Value>
+              <Value name="seed_internal_cv">1</Value>
+              <Value name="lambda_no_cv">0.5</Value>
+              <Value name="external_cv">False</Value>
+              <Value name="nfolds_external">5</Value>
+              <Value name="numberTrials">3</Value>
+              <Value name="external_seed_value">1</Value>
+              <Value name="graph.resolution">1x</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Analysis2_Regression2_large</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="Linear_Regression">
+            <Position x="402" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="curPage">Home</Value>
+              <Value name="curTab">advanced</Value>
+              <Value name="standardize_pred">True</Value>
+              <Value name="internal_cv">True</Value>
+              <Value name="display_graphs">True</Value>
+              <Value name="set_seed_internal_cv">True</Value>
+              <Value name="set_seed_external_cv">True</Value>
+              <Value name="lambda_1se">True</Value>
+              <Value name="lambda_min">False</Value>
+              <Value name="Model Name">Analysis2_Regression2_small</Value>
+              <Value name="Y Var">P_w</Value>
+              <Value name="X Vars">E_w,BV_w,RD_w,AD_w</Value>
+              <Value name="Omit Constant">False</Value>
+              <Value name="Use Weights">False</Value>
+              <Value name="Weight Vec" />
+              <Value name="regularization">False</Value>
+              <Value name="alpha">0.5</Value>
+              <Value name="nfolds">5</Value>
+              <Value name="lambda">lambda_1se</Value>
+              <Value name="seed_internal_cv">1</Value>
+              <Value name="lambda_no_cv">0.5</Value>
+              <Value name="external_cv">False</Value>
+              <Value name="nfolds_external">5</Value>
+              <Value name="numberTrials">3</Value>
+              <Value name="external_seed_value">1</Value>
+              <Value name="graph.resolution">1x</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Analysis2_Regression2_small</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="False" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Reports" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Reports" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>HW2_analysis2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="45db45cf-6d18-493c-a701-912b9e178b82" />
+      <Telemetry>
+        <PreviousWorkflowId value="4162a391-36be-4ad6-8304-7ae3c0bcdf17" />
+        <OriginWorkflowId value="4162a391-36be-4ad6-8304-7ae3c0bcdf17" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
