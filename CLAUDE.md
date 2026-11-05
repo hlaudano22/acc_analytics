@@ -2,7 +2,7 @@
 - This file wins over the OneDrive one when they conflict.
 
 # Folders
-- `Classwork\`: in-class starter notebooks and Alteryx work. It's its own git repo.
+- `Classwork\`: in-class starter notebooks and Alteryx work. The whole course folder is one git repo.
 - `Assignments\`: HW and project folders.
 - `Data_Files\`: all data files (xlsx, csv, yxdb). Notebooks go in Classwork or Assignments, not here.
 - `Lecture_Notes\`: slides and notes.
