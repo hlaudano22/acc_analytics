@@ -50,3 +50,7 @@ comp1 = load_data('file_name-1.xlsx')
 # Live notebook edits in VS Code
 - If the session starts with `ide` failed to connect (`CONNECTION_CLOSED`), tell me right away. Notebook edits still save to disk but may not show live in my window.
 - Running `/ide` didn't fix this on 11/4/2026. Restarting the Claude Code chat did. Restarting stops background agents, so check for running ones first and resume them after.
+
+# Editing shared Word docs in the browser
+- Don't paste into a shared doc through the Windows clipboard. My own copying can replace what's on it, and the wrong thing gets pasted.
+- In Word for the web with teammates editing, take a fresh screenshot before every click or keystroke. The page moves as they type, so a click can land in the doc instead of a box.
