@@ -11,3 +11,6 @@ __pycache__/
 *.bak
 desktop.ini
 .DS_Store
+
+# team share folder (kept out of git)
+/Assignments/Group Projects/COMM 5559 Project 1 - Documents/
